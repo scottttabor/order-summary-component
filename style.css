@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
 
 /* CSS Reset */
@@ -6,12 +6,195 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 /* Variables */
 
 :root {
- 
+ --main-BG: #E0E8FF;
+ --lead-text: #231F20;
+ --secondary-text: #717FA6;
+ --card-BG: #FFFFFF;
+ --btn-BG: #382AE1;
+
 }
+
+a {
+    display: block;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background: var(--main-BG) url(./images/pattern-background-mobile.svg) no-repeat fixed top;
+    
+}
+
+.content-container {
+    max-width: 1440px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.order-summary-card {
+    background-color: var(--card-BG);
+    max-width: 20rem;
+    border-radius: 1rem;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.order-summary-description {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.order-summary-card h1 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.order-summary-card p {
+    color: var(--secondary-text);
+    line-height: 1.5;
+    font-size: .9rem;
+    margin-bottom: 1.5rem;
+    padding: 0 .3rem;
+}
+
+.annual-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7F9FF;
+    padding: .9rem;
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+}
+
+.plan-details {
+    display: flex;
+    align-items: center;
+    
+}
+
+.annual-plan .plan-details img {
+    width: 48px;
+    height: 48px;
+}
+
+.plan-details-cost {
+    margin-left: 1rem;
+    height: 40px;
+}
+
+.plan-details-cost h3 {
+    font-size: .9rem;
+    font-weight: 900;
+}
+
+.annual-plan a {
+    font-size: .8rem;
+    font-weight: 700;
+    color: #382AE1;
+    transition: color .1s, text-decoration;
+}
+
+.annual-plan a:hover {
+    color: #766CF1;
+    text-decoration: none;
+}
+
+.order-summary-card #payment-button {
+    background-color: var(--btn-BG);
+    color: var(--card-BG);
+    text-decoration: none;
+    padding: .8rem;
+    font-weight: 700;
+    border-radius: .6rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0px 25px 25px 4px rgba(113,127,166,0.2);
+    transition: background-color .5s;
+}
+
+.order-summary-card #cancel-order {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 700;
+    transition: color .5s;
+}
+
+#payment-button:hover {
+    background-color: #766CF1;
+}
+
+#cancel-order:hover {
+    color: black;
+}
+
+
+
+@media screen and (min-width: 376px) {
+    main {
+        background: var(--main-BG) url(./images/pattern-background-desktop.svg) no-repeat fixed top;
+        background-size: 100% auto;
+        
+    }
+}
+
+@media screen and (min-width: 452px) and (min-height: 601px) {
+
+    .order-summary-card {
+        max-width: 28rem;
+    }
+
+    .hero-img {
+        margin-bottom: 1rem;
+    }
+
+    .order-summary-card h1 {
+        font-size: 1.8rem;
+    }
+
+    .order-summary-card p {
+        font-size: 1rem;
+        padding: 0 1.2rem;
+
+    }
+
+    .order-summary-card .annual-plan {
+        width: 90%;
+        padding: 1.4rem;
+        margin: auto;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+    }
+
+    #payment-button {
+        width: 90%;
+        margin: auto;
+    }
+
+    #cancel-order {
+        font-weight: 900;
+    }
+
+}
+
+
+
+
+
 
